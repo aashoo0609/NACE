@@ -5,23 +5,27 @@ import com.nace.Model.NACEDto;
 import com.nace.Repository.NACERepository;
 import com.opencsv.bean.CsvToBeanBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
 public class NACEServiceImpl implements NACEService{
     @Autowired
     private NACERepository naceRepository;
-
+    @Value("${csv.fileName}")
+    String fileName;
     @Override
     public void saveNACEDetails() throws FileNotFoundException {
-        String fileName = "C:\\Users\\hemra\\Downloads\\NACE_REV2_20220707_121503.csv";
-
-        List<NACEDto> beans = new CsvToBeanBuilder(new FileReader(fileName))
+        ClassLoader classLoader = getClass().getClassLoader();
+        File file = new File(Objects.requireNonNull(classLoader.getResource(fileName)).getFile());
+        List beans = new CsvToBeanBuilder(new FileReader(file))
                 .withType(NACEDto.class)
                 .build()
                 .parse();
