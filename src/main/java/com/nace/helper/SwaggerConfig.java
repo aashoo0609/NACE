@@ -1,4 +1,4 @@
-package com.nace.Helper;
+package com.nace.helper;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,7 +14,7 @@ public class SwaggerConfig {
     @Bean
     public Docket productApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .select().apis(RequestHandlerSelectors.basePackage("com.db"))
+                .select().apis(RequestHandlerSelectors.basePackage("com.nace"))
                 .paths(PathSelectors.regex("/api.*"))
                 .build();
     }

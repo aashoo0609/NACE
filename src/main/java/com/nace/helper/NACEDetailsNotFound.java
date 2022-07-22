@@ -1,4 +1,4 @@
-package com.nace.Helper;
+package com.nace.helper;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

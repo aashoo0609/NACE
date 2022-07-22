@@ -1,8 +1,8 @@
-package com.nace.Service;
+package com.nace.service;
 
-import com.nace.Helper.NACEDetailsNotFound;
-import com.nace.Model.NACEDto;
-import com.nace.Repository.NACERepository;
+import com.nace.helper.NACEDetailsNotFound;
+import com.nace.model.NACEDto;
+import com.nace.repository.NACERepository;
 import com.opencsv.bean.CsvToBeanBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -21,10 +21,11 @@ public class NACEServiceImpl implements NACEService{
     private NACERepository naceRepository;
     @Value("${csv.fileName}")
     String fileName;
+
     @Override
     public void saveNACEDetails() throws FileNotFoundException {
         ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(Objects.requireNonNull(classLoader.getResource(fileName)).getFile());
+        File file = new File(classLoader.getResource(fileName).getFile());
         List beans = new CsvToBeanBuilder(new FileReader(file))
                 .withType(NACEDto.class)
                 .build()

@@ -1,13 +1,16 @@
-package com.nace.Service;
+package com.nace.service;
 
-import com.nace.Helper.NACEDetailsNotFound;
-import com.nace.Model.NACEDto;
-import com.nace.Repository.NACERepository;
+import com.nace.helper.NACEDetailsNotFound;
+import com.nace.model.NACEDto;
+import com.nace.repository.NACERepository;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.util.ReflectionTestUtils;
 
 import java.io.FileNotFoundException;
 import java.util.List;
@@ -25,6 +28,10 @@ public class NACEServiceImplTest {
     @Mock
     private NACERepository repository;
 
+    @Before
+    public void setUp() {
+        ReflectionTestUtils.setField(naceService, "fileName", "NACE_REV2_20220720_143839.csv");
+    }
     @Test
     public void test_saveNaceDetails() throws FileNotFoundException {
         naceService.saveNACEDetails();

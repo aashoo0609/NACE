@@ -1,4 +1,4 @@
-package com.nace.Model;
+package com.nace.model;
 
 import com.opencsv.bean.CsvBindByName;
 import lombok.Data;

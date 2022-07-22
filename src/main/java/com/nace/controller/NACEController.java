@@ -1,7 +1,7 @@
-package com.nace.Controller;
+package com.nace.controller;
 
-import com.nace.Model.NACEDto;
-import com.nace.Service.NACEService;
+import com.nace.model.NACEDto;
+import com.nace.service.NACEService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

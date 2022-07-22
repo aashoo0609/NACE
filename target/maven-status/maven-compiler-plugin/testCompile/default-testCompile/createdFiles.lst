@@ -1,3 +1,3 @@
 com/nace/ClmApplicationTests.class
-com/nace/Controller/NACEControllerTest.class
-com/nace/Service/NACEServiceImplTest.class
+com/nace/service/NACEServiceImplTest.class
+com/nace/controller/NACEControllerTest.class

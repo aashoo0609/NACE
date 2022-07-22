@@ -1,8 +1,8 @@
-com/nace/Repository/NACERepository.class
 com/nace/NaceApplication.class
-com/nace/Service/NACEServiceImpl.class
-com/nace/Helper/NACEDetailsNotFound.class
-com/nace/Service/NACEService.class
-com/nace/Controller/NACEController.class
-com/nace/Helper/SwaggerConfig.class
-com/nace/Model/NACEDto.class
+com/nace/model/NACEDto.class
+com/nace/helper/SwaggerConfig.class
+com/nace/service/NACEServiceImpl.class
+com/nace/repository/NACERepository.class
+com/nace/helper/NACEDetailsNotFound.class
+com/nace/controller/NACEController.class
+com/nace/service/NACEService.class

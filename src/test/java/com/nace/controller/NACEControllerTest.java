@@ -1,7 +1,7 @@
-package com.nace.Controller;
+package com.nace.controller;
 
-import com.nace.Model.NACEDto;
-import com.nace.Service.NACEService;
+import com.nace.model.NACEDto;
+import com.nace.service.NACEService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;

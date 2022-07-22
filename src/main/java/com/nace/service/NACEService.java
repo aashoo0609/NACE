@@ -1,6 +1,6 @@
-package com.nace.Service;
+package com.nace.service;
 
-import com.nace.Model.NACEDto;
+import com.nace.model.NACEDto;
 
 import java.io.FileNotFoundException;
 
