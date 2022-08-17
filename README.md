@@ -52,5 +52,5 @@ Postman:
                 "itemAlsoIncludes": "",
                 "rulings": "",
                 "itemExcludes": "",
-    "           reference": "A"
+                "reference": "A"
             }
