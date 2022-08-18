@@ -82,7 +82,7 @@
 				<version>2.8.0</version>
 				<configuration>
 					<to>
-						<image>gcr.io/est-project-359609/naceImage</image>
+						<image>gcr.io/est-project-359609/naceimage</image>
 					</to>
 				</configuration>
 			</plugin>
